@@ -1,0 +1,17 @@
+TreeSearch(tree,item):
+   Input  tree, item
+   Output true if item found in tree, false otherwise
+ 
+   if tree is empty then
+		return false
+   else if item < data(tree) then
+		return TreeSearch(left(tree),item)
+   else if item > data(tree) then
+		return TreeSearch(right(tree),item)
+   else // found 
+		if tree is marked deleted then // item is deleted
+			return false
+		else  // item is NOT marked as deleted so its found
+			return false
+		end if
+   end if

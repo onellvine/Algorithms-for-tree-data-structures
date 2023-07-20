@@ -1,0 +1,27 @@
+insertAVL(tree, item):
+    Input  tree, item
+    Output tree with item AVL-inserted
+    if tree is empty then
+        return new node containing item
+    else if item = data(tree) and tree is marked as deleted then
+        mark the tree as undeleted
+        return tree
+    else
+        if item < data(tree) then
+            left(tree) = insertAVL(left(tree), item)
+        else if item > data(tree) then
+            right(tree) = insertAVL(right(tree), item)
+        end if
+        if height(left(tree)) - height(right(tree)) > 1 then
+            if item > data(left(tree)) then
+                left(tree) = rotateLeft(left(tree))
+            end if
+            tree = rotateRight(tree)
+        else if height(right(tree)) - height(left(tree)) > 1 then
+            if item < data(right(tree)) then
+                right(tree) = rotateRight(right(tree))
+            end if
+            tree = rotateLeft(tree)
+        end if
+        return the updated tree
+    end if

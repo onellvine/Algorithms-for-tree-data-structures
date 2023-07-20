@@ -1,0 +1,16 @@
+Tree deleteNode(Tree tree, Item v)
+    Input  tree, v
+    Output new tree which does not contain an undeleted node with value v
+
+    if t is empty then
+        return NULL;
+    
+    if v < data(tree) then
+        left(tree) = deleteNode(left(tree), v);
+    else if v > data(tree) then
+        right(tree) = deleteNode(right(tree), v);
+    else // Found the node with value v
+        tree->deleted = true; // Mark the node deleted
+    end if
+
+    return t;
