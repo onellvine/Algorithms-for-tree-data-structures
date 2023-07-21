@@ -41,19 +41,7 @@ Tree newNode(Item it) {
 Tree rotateRight(Tree);
 Tree rotateLeft(Tree);
 
-// insert a new item into a tree
-// Tree TreeInsert(Tree t, Item it) {
 
-//    printf("Not yet implemented.\n");
-//    printf("Returning a fixed tree instead:\n");
-
-//    Tree testTree = newNode(2);
-//    colour(testTree) = BLACK;
-//    left(testTree) = newNode(1);
-//    right(testTree) = newNode(3);
-//    return testTree;
-
-// }
 Tree insertRB(Tree t, int it, bool hasRight)
 {
 	if(t == NULL)
